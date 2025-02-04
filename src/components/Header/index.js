@@ -1,14 +1,28 @@
 
+import logosvg from'../../svg/logo.svg';
 
 const Header = () => {
 
-
-    
-    let contador = 8;
-    
+      
+    const descLogo = "Essa é a logo do Blog.";
     
     return (
-        <h1>Header.js {contador}</h1>
+        <>
+        <header className='flex-space-between'>
+            <div className="logo">
+                <img src={logosvg} alt={descLogo} />
+            </div>
+            <div className="search">
+                <input type="text" className='input-search' name='search' />
+            </div>
+            <ul className="menu">
+                <li> <a href='#' className='nav-link'> Categoria</a> </li>
+                <li> <a href='#' className='nav-link'> Sobre</a> </li>
+                <li> <a href='#' className='nav-link'> Contato</a> </li>
+            </ul>
+        </header>        
+        
+        </>
     );
 }
 
